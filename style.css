@@ -16,7 +16,7 @@
 
 .header {
   grid-area: header;
-  text-align: center;
+  text-align: right;
   background: #0ab1fff3;
   color: white;
   padding: 20px;
@@ -26,9 +26,10 @@
 .left {
   grid-area: left;
   background: rgb(0, 0, 255);
-  padding: 20px;
+  padding: 300px 20px 300px 0px;
   border-radius: 8px;
   color: white;
+  
 }
 
 .right {
@@ -46,16 +47,31 @@ h2 {
   border-bottom: 2px solid #9A5FDE;
   padding-bottom: 5px;
 }
-/* CSS */
+
 a {
     color: white;       /* letra blanca */
     text-decoration: none; /* quitar subrayado */
+    text-align: center;
 }
 
 a:hover {
-    text-decoration: underline; /* opcional: subrayado al pasar el ratón */
+    text-decoration: underline; /* subrayado al pasar el ratón */
 }
 h2.blanco {
     color: white;
+    border-bottom: 2px none;
+    text-align: center;
 }
 
+
+.left p {
+    text-align: center;
+}
+.left li {
+  
+  font-size: 15px;
+  white-space: nowrap;
+}
+.left h2 {
+    margin-top: 150px;
+}
