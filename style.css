@@ -1,104 +1,219 @@
+/* ===================== Contenedor principal ===================== */
+
 .container {
   display: grid;
   grid-template-areas: 
     "header header"
     "left right";
   grid-template-columns: minmax(400px, 1fr) minmax(400px, 3fr);
- /* izquierda más estrecha */
-  
 
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Verdana;
+  font-family: "Poppins", Verdana, sans-serif; /* tipografía más moderna */
   line-height: 1.6;
-    gap: 20px;
-    
+  gap: 20px;
 }
+
+/* ===================== Header ===================== */
 
 .header {
   grid-area: header;
   text-align: right;
-  background: #0ab1fff3;
+  background: linear-gradient(135deg, #0ab1ff, #0077b6); /* gradiente */
   color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra */
 }
+
+/* ===================== Columna izquierda ===================== */
 
 .left {
   grid-area: left;
-  background: rgb(0, 0, 255);
-  border-radius: 8px;
+  background: linear-gradient(180deg, #1e3a8a, #3b82f6); /* azul degradado */
+  border-radius: 12px;
   color: white;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* sombra */
 }
 
+/* ===================== Columna derecha ===================== */
 
 .right {
   grid-area: right;
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra sutil */
 }
+
+/* ===================== Titulares ===================== */
 
 h2 {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #333;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #9A5FDE;
+  color: #222;
+  font-size: 1.4rem; /* un poco más grande */
+  font-weight: 600;
+  border-bottom: 2px solid #5f6ade;
   padding-bottom: 5px;
 }
+h2.blanco {
+  color: white;
+  border-bottom: none;
+  text-align: center;
+}
+
+/* ===================== Párrafos ===================== */
+
+.left p {
+  text-align: center;
+}
+
+/* ===================== Links ===================== */
 
 .left a {
-    color: white;       /* letra blanca */
-    text-decoration: none; /* quitar subrayado */
-    text-align: center;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2 ease, color 0.3s ease; /* animación suave */
 }
 
 .left a:hover {
-    text-decoration: underline; /* subrayado al pasar el ratón */
-}
-h2.blanco {
-    color: white;
-    border-bottom: 2px none;
-    text-align: center;
+  color: #ffd700; /* dorado al hover */
+  text-decoration: underline;
 }
 
+/* ===================== Lista con iconos ===================== */
 
-.left p {
-    text-align: center;
-}
 .left li {
-  
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 15px;
-  white-space: nowrap;
 }
+
+.left li::before {
+  content: "✓";            /* icono */
+  display: inline-block;    /* importante para que se transforme correctamente */
+  color: #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.left li:hover::before {
+  transform: scale(1.5);   /* escala más evidente */
+  color: #d8b4fe;          /* púrpura claro al hover */
+}
+
+
+/* ===================== Otros ajustes ===================== */
+
+
 .left h2 {
-    margin-top: 150px;
+  margin-top: 150px;
 }
+
+/* ===================== Responsive ===================== */
+
 @media (max-width: 768px) {
   .container {
     grid-template-areas:
       "header"
       "left"
       "right";
-    grid-template-columns: 1fr; /* solo una columna */
+    grid-template-columns: 1fr;
   }
 
   .left, .right {
     padding: 20px;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .left, .right, .header {
+    width: 100%;
+  }
 }
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-  }
-  .left, .right {
-    padding: 15px;
-  }
+
+/* ===================== Timeline ===================== */
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #3b82f6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -18px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.timeline-content p {
+  margin: 2px 0 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.en-curso {
+  color: #22c55e;   /* verde tailwind (emerald/500) */
+  font-weight: bold;
+}
+
+.incompleto {
+  color: salmon;
+}
+
+/* ===================== Barras Skills ===================== */
+
+.skill {
+  display: flex;                  /* texto y barra en línea */
+  align-items: center;            
+  margin-bottom: 12px;
+  gap: 12px;                      /* espacio entre texto y barra */
+}
+
+.skill span {
+  flex: 0 0 180px;                /* ancho fijo para que todo quede alineado */
+  font-weight: 500;
+}
+
+.bar {
+  flex: 1;                        /* la barra ocupa el resto del espacio */
+  background: #e5e7eb;            /* gris claro */
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.level {
+  background: linear-gradient(90deg, #3b82f6, #2563eb); /* azul degradado */
+  height: 100%;
+  border-radius: 8px;
 }
 
