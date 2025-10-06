@@ -131,23 +131,10 @@
 
 
 <script>
-  // Animación del header al cargar la página
-  gsap.from(".left", { 
-    y: 500,          // se mueve desde arriba
-    opacity: 0,       // aparece progresivamente
-    duration: 2,    // duración en segundos
-    ease: "power2.out"  // movimiento suave
-  });
+ 
+  // Animaciónes al cargar la página
 
-  // Animación del header al cargar la página
-  gsap.from(".header", { 
-    x: -500,          // se mueve desde arriba
-    opacity: 0,       // aparece progresivamente
-    duration: 1.5,    // duración en segundos
-    ease: "power2.out"  // movimiento suave
-  });
-
-  gsap.from(".skill", {
+  gsap.from(".skill, .left", {
     opacity: 0,
     y: 300,
     duration: 1.5,
@@ -155,39 +142,21 @@
     ease: "power2.out"
   });
 
-  gsap.from(".timeline-item", {
+  gsap.from(".timeline-item, timeline-dot, .header", {
     opacity: 0,
     x: 300,
-    duration: 1.5,
+    duration: 2,
     stagger: 0.5, // tiempo entre una y otra
     ease: "power2.out"
   });
 
-  gsap.from(".timeline-dot", {
-    opacity: 0,
-    x: 300,
-    duration: 1.5,
-    stagger: 0.5, // tiempo entre una y otra
-    ease: "power2.out"
-  });
-
-  gsap.from(".right-h2", {
+  gsap.from(".right-h2, .right p", {
   text: "",                // requiere plugin GSAP TextPlugin
-  duration: 1.5,
+  duration: 2,
   ease: "power1.out"
 });
 
-  gsap.from(".right p", {
-  duration: 3,         // duración total de la animación
-  text: "",            // empieza vacío
-  ease: "power1.out",
-  stagger: 0.2         // si hay varios párrafos, se escriben uno tras otro
-});
-
-
 
 </script>
-
-
 </body>
 </html>
