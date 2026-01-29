@@ -264,7 +264,7 @@ h3.blanco:hover {
 }
 
 .proyecto_final {
-  color: rgb(248, 67, 21);
+  color: #f83319f6;
 }
 
 /* ===================== Barras Skills ===================== */
@@ -299,6 +299,11 @@ h3.blanco:hover {
 
 .blink {
   color: #21ee0ef6; /* verde */
+  animation: blink-animation 3s infinite;
+}
+
+.blinkpf {
+  color: #f83319f6; /* rojo */
   animation: blink-animation 3s infinite;
 }
 
