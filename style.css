@@ -255,7 +255,7 @@ h3.blanco:hover {
 }
 
 .en-curso {
-  color: #22c55e;   /* verde tailwind (emerald/500) */
+  color: #22eaf8f6; /* azul  verde tailwind (emerald/500) */
   font-weight: bold;
 }
 
@@ -264,7 +264,7 @@ h3.blanco:hover {
 }
 
 .proyecto_final {
-  color: #f83319f6;
+  color: #21ee0ef6; /* verde */
 }
 
 /* ===================== Barras Skills ===================== */
@@ -298,13 +298,14 @@ h3.blanco:hover {
 /* ===================== Animaciónes ===================== */
 
 .blink {
-  color: #21ee0ef6; /* verde */
+  color: #22eaf8f6; /* azul */
   animation: blink-animation 3s infinite;
 }
 
 .blinkpf {
-  color: #f83319f6; /* rojo */
+  color: #21ee0ef6; /* verde */
   animation: blink-animation 3s infinite;
+  font-weight: 700;
 }
 
 @keyframes blink-animation {
