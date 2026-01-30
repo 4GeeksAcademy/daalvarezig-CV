@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - David Álvarez Iglesias</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>David Álvarez Iglesias</h1>
+      <p>Analista financiero</p>
+    </div>
+
+    <div class="left">
+      <h2 class="blanco"><span class="icon">🎯</span> Contacto</h2>
+      <h3 class="blanco"><span class="icon">📞</span> 644 935 856</h3>
+      <p>✉️ <a href="mailto:daalvarezig@gmail.com">daalvarezig@gmail.com</a></p>
+      <p>🔗<a href="https://linkedin.com/in/davidalvarezig" target="_blank">linkedin.com/in/davidalvarezig</a></p>
+      <p>🐙<a href="https://github.com/daalvarezig" target="_blank">github.com/daalvarezig</a></p>
+
+      <h2 class="blanco"><span class="icon">🚀</span> Otros</h2>
+      <ul>
+        <li>Alta capacidad de aprendizaje autodidacta</li> <br>
+        <li>Acostumbrado a entornos regulados y críticos</li> <br>
+        <li>Perfil híbrido: funcional con orientación técnica</li> <br>
+        <li>Inglés B1</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <h2 class="right-h2"><span class="icon">📚</span> Perfil Profesional</h2>
+      <p>
+        Especialista funcional en entornos financieros con más de 13 años de experiencia
+        en soporte de operaciones y mantenimiento en plataformas críticas como Murex (Mx.3). 
+        Perfil resolutivo, orientado a procesos, con experiencia en back office, 
+        bases de datos y soporte a unidades de negocio en entorno bancario. 
+        En formación continua en desarrollo de software y tecnologías multiplataforma.
+      </p>
+
+      <h2 class="right-h2"><span class="icon">💼</span> Experiencia Profesional</h2>
+      <p><strong>Santander Back Office Mayoristas</strong> – Analista de Operaciones (2011 – 2025)</p>
+      <ul>
+        <li>Soporte funcional en Calypso, MDR GBO y Murex (Mx.3) para trading y middle office.</li>
+        <li>Configuración, soporte y gestión de entornos FO y BO, conocimiento en flujos, pricing y reporting.</li>
+        <li>Mantenimiento de bases de datos internas y documentación de procedimientos.</li>
+        <li>Interlocución directa con usuarios internos/técnicos en España, UK, Latam y NY.</li>
+      </ul>
+
+      <h2 class="right-h2"><span class="icon">🎓</span> Formación Académica y Técnica</h2>
+      <!-- TIMELINE FORMACIÓN INICIO -->
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h4>GS Desarrollo Aplicaciones Multiplataforma</h4>
+      <p>Universidad Alfonso X el Sabio<span class="blink"> ( En curso)</span></p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h4>Full Stack Developer</h4>
+      <p>4Geeks Academy<span class="blinkpf"> ( Proyecto Final)</span></p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h4>Excel Avanzado</h4>
+      <p>Escuela Excel y Finanzas<span class="blink"> ( Formación continua)</span></p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h4>Grado en Ingeniería Informática</h4>
+      <p>Univ. de Burgos<span class="incompleto">( Incompleto)</span></p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h4>Bachillerato</h4>
+      <p>I.B. Los Castillos (1992)</p>
+    </div>
+  </div>
+</div>
+<!-- TIMELINE FORMACIÓN FIN -->
+
+      <h2 class="right-h2"><span class="icon">🛠️</span> Skills</h2>
+
+<div class="skill">
+  <span>Murex Mx.3</span>
+  <div class="bar">
+    <div class="level" style="--level-width: 90%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span>BBDD (SQL básico)</span>
+  <div class="bar">
+    <div class="level" style="--level-width: 70%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span>Excel</span>
+  <div class="bar">
+    <div class="level" style="--level-width: 95%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span>HTML / CSS / JS</span>
+  <div class="bar">
+    <div class="level" style="--level-width: 60%"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/TextPlugin.min.js"></script>
+
+
+<script>
+ 
+  // Animaciónes al cargar la página
+
+  gsap.from(".skill, .left", {
+    opacity: 0,
+    y: 300,
+    duration: 1.5,
+    stagger: 0.5, // tiempo entre una y otra
+    ease: "power2.out"
+  });
+
+  gsap.from(".timeline-item, timeline-dot, .header", {
+    opacity: 0,
+    x: 300,
+    duration: 2,
+    stagger: 0.5, // tiempo entre una y otra
+    ease: "power2.out"
+  });
+
+  gsap.from(".right-h2, .right p", {
+  text: "",                // requiere plugin GSAP TextPlugin
+  duration: 2,
+  ease: "power1.out"
+});
+
+
+</script>
+</body>
+</html>
